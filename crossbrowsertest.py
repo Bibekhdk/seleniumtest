@@ -22,11 +22,6 @@ elif browsername == "chrome":
 else:
     print("Enter the correct browser name:", browsername)
 
-
-
-
-
-
     
     exit()
 
