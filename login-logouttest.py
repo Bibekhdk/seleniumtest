@@ -7,8 +7,6 @@ import time
 
 
 url = "https://ipn-tms-staging.koilifin.com/auth"
-
-
 service = Service('/snap/bin/geckodriver') 
 driver = webdriver.Firefox(service=service)
 driver.get(url)

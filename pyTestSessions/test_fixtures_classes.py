@@ -21,6 +21,28 @@ def init_ff_driver(request):
     yield
     ff_driver.close()
 
-    
+@pytest.mark.usefixtures('init_chrome_driver')
+class Base_chrome_Test:
+    pass
+
+class Test_Google_Chrome(Base_chrome_Test):
+
+    def test_google_title_chrome(self):
+        self.driver.get("https://www.google.com")
+        assert self.driver.title=="Google"
+
+
+@pytest.mark.usefixtures('init_ff_driver')
+class Base_Firefox_Test:
+    pass
+
+
+class Test_Google_Firefox(Base_Firefox_Test):
+
+    def test_google_title_firefox(self):
+        self.driver.get("https://www.google.com")
+        assert self.driver.title=="Google"
+
+  
 
 
